@@ -4,14 +4,7 @@
 const obj = require('./testing');
 // let calc = new Calculator();
  const calculator= require('./calculator');
-
- test('adds 1 + 2 to equal 3', () => {
-   expect(obj.sum(1, 2)).toBe(3);
- });
-  test('add 1 string + 1 number to equal NaN',() => {
-  expect(obj.sum('a', 2)).toBe(NaN);
-});
-
+// first
   test('testing capitalize function',() => {
     expect(obj.capitalize("ilayda")).toBe("Ilayda");
   });
@@ -33,41 +26,36 @@ const obj = require('./testing');
   test('testing capitalize function with none',() => {
     expect(obj.capitalize("")).toBe("");
   });
+  // second
   test('testing reverseString function',() => {
     expect(obj.reverseString("ilayda")).toBe("adyali");
   });
   test('testing reverseString function',() => {
-    expect(obj.reverseString("bana")).toBe("annab");
+    expect(obj.reverseString("bana")).toBe("anab");
   });
   test('testing reverseString fuction with empty string',() => {
     expect(obj.reverseString("")).toBe("");
   });
   test('testing reverseString fuction with number string',() => {
-    expect(obj.reverseString("12345")).toBe("65425");
+    expect(obj.reverseString("12345")).toBe("54321");
   });
   test('testing reverseString fuction with complicated string',() => {
     expect(obj.reverseString(".0t")).toBe("t0.");
   });
-  test('testing reverseString fuction with integers',() => {
-    expect(obj.reverseString(45)).toBe(54);
-  });
-  test('testing reverseString fuction with integers',() => {
-    expect(obj.reverseString(45)).toBe("You can't");
-  });
   test('testing reverseString fuction with .',() => {
-    expect(obj.reverseString(".")).toBe("You can't");
+    expect(obj.reverseString(".")).toBe(".");
   });
   test('testing reverseString fuction with integers',() => {
     expect(obj.reverseString(45)).toBe("You can't enter a number ,enter a string.");
   });
- 
+//  third
   test('testing calculator add function',() => {
-    expect(calculator.add(4,5)).toBe(8);
+    expect(calculator.add(4,5)).toBe(9);
   
   });
   
   test('testing calculator substract function',() => {
-    expect(calculator.substract(4,5)).toBe(-5);
+    expect(calculator.substract(4,5)).toBe(-1);
   
   });
   test('testing calculator multiply function',() => {
@@ -75,36 +63,33 @@ const obj = require('./testing');
   
   });
   test('testing calculator divide function',() => {
-    expect(calculator.divide(4,5)).toBe(0);
+    expect(calculator.divide(4,5)).toBe(0.8);
   
   });
   test('testing calculator divide function',() => {
-    expect(calculator.divide(4,0)).toBe(0);
+    expect(calculator.divide(4,0)).toBe("you can not divide by 0");
   
   });
-
+// fourth
   test('testing caesarCipher',() => {
-    expect(obj.caesarCipher("ilayda")).toBe("a");
-  
-  });
-  test('testing caesarCipher',() => {
-    expect(obj.caesarCipher(".")).toBe(".");
+    expect(obj.caesarCipher("ilayda")).toBe("jmbzeb");
   
   });
   test('testing caesarCipher',() => {
-    expect(obj.caesarCipher("testy549.")).toBe("");
+    expect(obj.caesarCipher(".")).toBe("/");
   
   });
-  // test('testing analyzeArray',() => {
-  //   expect(obj.analyzeArray([4,4,3,5])).toBe("");
+  test('testing caesarCipher',() => {
+    expect(obj.caesarCipher("testy549.")).toBe("uftuz650/");
   
-  // });
+  });
+  //fifth
   test('testing analyzeArray',() => {
-    expect(obj.analyzeArray([4,4,3,6])).toBe();
+    expect(obj.analyzeArray([4,4,3,6])).toEqual({"average": 4.25, "length": 4, "max": 6, "min": 3});
   
   });
   test('testing analyzeArray',() => {
-    expect(obj.analyzeArray([4,2,4,3])).toBe();
+    expect(obj.analyzeArray([4,2,4,3])).toEqual({"average": 3.25, "length": 4, "max": 4, "min": 2});
   
   });
   test('testing analyzeArray',() => {
@@ -128,13 +113,6 @@ const obj = require('./testing');
 
   
 
-  
-
-  
-  
-
-
-  
 
 
 
