@@ -1,7 +1,9 @@
 // const capitalize = require('./sum');
 // const sum = require('./sum');
+// import Calculator  from './calculator.js';
 const obj = require('./testing');
-const calculator= require('./calculator');
+// let calc = new Calculator();
+ const calculator= require('./calculator');
 
  test('adds 1 + 2 to equal 3', () => {
    expect(obj.sum(1, 2)).toBe(3);
@@ -60,18 +62,36 @@ const calculator= require('./calculator');
   });
  
   test('testing calculator add function',() => {
-    expect(calculator.add(4,5)).toBe(9);
+    expect(calculator.add(4,5)).toBe(8);
   
   });
-  test('testing calculator add function',() => {
+  
+  test('testing calculator substract function',() => {
+    expect(calculator.substract(4,5)).toBe(-5);
+  
+  });
+  test('testing calculator multiply function',() => {
+    expect(calculator.multiply(2,1)).toBe(2);
+  
+  });
+  test('testing calculator divide function',() => {
+    expect(calculator.divide(4,5)).toBe(0);
+  
+  });
+  test('testing calculator divide function',() => {
+    expect(calculator.divide(4,0)).toBe(0);
+  
+  });
+
+  test('testing caesarCipher',() => {
     expect(obj.caesarCipher("ilayda")).toBe("a");
   
   });
-  test('testing calculator add function',() => {
+  test('testing caesarCipher',() => {
     expect(obj.caesarCipher(".")).toBe(".");
   
   });
-  test('testing calculator add function',() => {
+  test('testing caesarCipher',() => {
     expect(obj.caesarCipher("testy549.")).toBe("");
   
   });
@@ -97,6 +117,25 @@ const calculator= require('./calculator');
   
   });
   
+
+
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
 
 
 
